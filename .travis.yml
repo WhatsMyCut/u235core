@@ -1,0 +1,32 @@
+language: node_js
+node_js:
+- '6'
+env:
+  matrix:
+  - CXX=g++-4.8 NODE_ENV=test IMAGE_NAME=U235core TASK_DEFINITION=U235Core
+    AWS_DEFAULT_REGION=us-east-1
+  global:
+  - secure: ge7FoAWhjxneOTLIdZRuuZnclLpjSlhtnIBmGv+YkA7T+6QdUK9kky1+7TDacY9ZZBn0FVzPEWh7Pf+KmAoqCp4vcMmcAVMGTwJ6/qp3ArtcjQGUQVCOYcPRc8xlgcD+La70VCwvCfny/uKsgxq4jQvFOWrctUordVQng6A00M1qwDI8dQuPJPc5vPSDhG0AY0/oZveyVEzgdXkrpar4sTXgppm0142N+IIFay2clNGVxVkKWMquYSOqKhiBBkR+t6QEpAuPyBE53Ofgs9crTuQtoiv6zOmKtgwbyhnw7lBBuDTDUz2rJvFZiU0CqJVNDv/Xg9AtVvQbgj3O8bRbUrFtUs48NUoD8pPaq8bK64lnClfHgKJpqndlphIK9u6ETc9AUKsb8Xpz+n+glo91uDEyvX+4wB//UoBYdO3NALhgQxV2BCZnrbCQh80jBtMtaquPNf9qeHZQ4gOm4mNrLh9Co50D/5sZHBGDZ8PugjptvDEi0Gj3ia48Cd8zoOl/k0Km5dxB3yrnlg9qud/UzWmEJAfFqwnpEUahPE9fR+UM3Wn61P/T7NNVgIZhYlTlCBy6dzw341his/obPfXM2WqOCQpoaiEWVI4xEhpIF58+U1gqoIScrh0k1Q21L+HbFa4S2LoJYXHJmvFne9cd2bWjPfpCgNHFsQu235yhOnGzU=
+  - secure: cNyicB9CWztUsqHlhalX1Eeayephx6Ko2SHVMawN3UdzLnQxj852UcgGpsdDvlZ7l4nBycR4pZ4VYVsD+Rz1Ab9Pty65N4iN1XTBZrPutZGhV3UdktzHo3T7UtVMiBA7K86uyXhODEWzLGChHq5TbeL3dlSePHrusu5JAp1ECSyASevP58VrNMswxALauRH/CqUuAFPZOAgpRGoIfjFRn/9M4EZd2vfhAQv+ELPxokW16RWY8FuH5EJoJdyESiOotCVw+XfqGvGzt6y1HbsjUslr8KoVcIUeixdGM27RQX8przzMVy7+7IZpcLe977yLFZhcJyCXWzTnATaie6wkA1loiNwgu235k8GZhQI7xfaOxaC63Mml/IeETJ2F/0qTPTOwsnDTIIHwn7ByDSC2w//mH43vLu9zUu+pxg/hpJdgFU7R4Z/anHpmS1oFKW05g86r3mDaMZR7fLmj7Iz+LMqq+6NIAkd0jAFUv02X+rZ0ggllMDKo1d1WH/F6hfTl6reUtMrXmoW9l0q7RDzyMgn/62YmDfrclj/fe9uCjHA8x/scuITvSG43eZ56iv981IewI+zZjTipKX3yrHlMIJreHLLtswnVxIqFl7xGAHTOb2K0VFhijGdodbQWKM7QN4s9D2RKE58LfvXtNXd4uUzB44BnQRTdwm+OGkayC+S78=
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-4.8
+  postgresql: '9.4'
+services:
+- postgresql
+- docker
+before_script:
+- psql -c "create role u235core with login password 'u235coredbpassword'" -U postgres
+- psql -c "create database u235core_test owner u235core" -U postgres
+- node_modules/.bin/knex migrate:latest
+before_install:
+- pip install --user awscli
+- export PATH=$PATH:$HOME/.local/bin
+deploy:
+  provider: script
+  script: scripts/ecs_deploy.sh
+  on:
+    branch: develop

@@ -1,0 +1,43 @@
+version: '2'
+services:
+  u235core:
+    container_name: u235core
+    build: .
+    env_file: .env.dev
+    entrypoint:
+      - /bin/bash
+      - -c
+    command:
+      - /usr/bin/npm run db:migrate && /usr/bin/npm start
+    ports:
+      - "8000:80"
+      - "5858:5858"
+    environment:
+      - SSH_AUTH_SOCK=/ssh-agent
+    depends_on:
+      - db
+      - db_test
+    volumes:
+      - ~/.aws:/root/.aws
+      - $SSH_AUTH_SOCK:/ssh-agent
+  db:
+    image: postgres:9.5
+    environment:
+      - POSTGRES_PASSWORD=u235corepassword
+      - POSTGRES_USER=u235core
+      - POSTGRES_DB=u235core
+    ports:
+      - "5432:5432"
+  db_test:
+    image: postgres:9.5
+    environment:
+      - POSTGRES_PASSWORD=u235corepassword
+      - POSTGRES_USER=u235core
+      - POSTGRES_DB=u235core
+    ports:
+      - "5433:5432"
+networks:
+  default:
+    external:
+      name: u235
+
