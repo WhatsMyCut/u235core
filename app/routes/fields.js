@@ -2,7 +2,6 @@
 
 const Joi = require('joi')
 const Promise = require('bluebird')
-const fieldsToSchema = require('../lib/fieldsToSchema')
 const Permissions = require('../lib/constants/Permissions')
 
 module.exports = {

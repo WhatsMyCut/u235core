@@ -23,7 +23,7 @@ services:
   db:
     image: postgres:9.5
     environment:
-      - POSTGRES_PASSWORD=u235corepassword
+      - POSTGRES_PASSWORD=u235coredbpassword
       - POSTGRES_USER=u235core
       - POSTGRES_DB=u235core
     ports:
@@ -31,7 +31,7 @@ services:
   db_test:
     image: postgres:9.5
     environment:
-      - POSTGRES_PASSWORD=u235corepassword
+      - POSTGRES_PASSWORD=u235coredbpassword
       - POSTGRES_USER=u235core
       - POSTGRES_DB=u235core
     ports:

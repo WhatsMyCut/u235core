@@ -360,7 +360,7 @@
     "u235logger": {
       "version": "1.0.0",
       "from": "git+ssh://git@github.com/WhatsMyCut/u235logger.git#v0.1.0",
-      "resolved": "git+ssh://git@github.com/WhatsMyCut/u235logger.git"
+      "resolved": "git+ssh://git@github.com/WhatsMyCut/u235logger.git#0d90f7cd214b474a4fd0940f869a923c19df7a02"
     },
     "ecdsa-sig-formatter": {
       "version": "1.0.9",
