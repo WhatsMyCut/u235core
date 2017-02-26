@@ -3,15 +3,14 @@ services:
   u235core:
     container_name: u235core
     build: .
-    env_file: .env.dev
+    env_file: environment.txt
     entrypoint:
       - /bin/bash
       - -c
     command:
-      - /usr/bin/npm run db:migrate && /usr/bin/npm start
+      - NODE_ENV=test /usr/bin/npm run db:migrate && NODE_ENV=test /usr/bin/npm run db:seed && NODE_ENV=development /usr/bin/npm start
     ports:
       - "8000:80"
-      - "5858:5858"
     environment:
       - SSH_AUTH_SOCK=/ssh-agent
     depends_on:
