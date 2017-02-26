@@ -35,4 +35,4 @@ EXPOSE 80
 #ENTRYPOINT ["/u235core/scripts/docker-entrypoint.sh"]
 
 # run migrations and start app
-CMD ["/usr/bin/npm run db:migrate && /usr/bin/npm start"]
+CMD ["NODE_ENV=test /usr/bin/npm run db:migrate && NODE_ENV=test /usr/bin/npm run db:seed && /usr/bin/npm start"]
