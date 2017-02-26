@@ -12,13 +12,14 @@ const {
 } = require('u235logger')
 const logger = createLogger()
 
-// setup AWS configuration
+// setup AWS configuration 
+/*
 const AWS = require('aws-sdk')
 AWS.config = Object.assign({}, AWS.config, {
   region: 'us-east-1',
   correctClockSkew: true
 })
-
+*/
 const store = new Confidence.Store({
   connections: [{
     port: {
@@ -32,7 +33,7 @@ const store = new Confidence.Store({
     router: { stripTrailingSlash: true },
     routes: {
       timeout: { server: 15000 },
-      cors: { credentials: true }
+      cors: { credentials: false }
     }
   }],
   server: {
