@@ -1,5 +1,5 @@
 const Promise = require('bluebird')
-const bcrypt = Promise.promisifyAll(require('bcrypt'))
+const bcrypt = require('bcrypt')
 const uuid = require('node-uuid')
 const crypto = require('crypto')
 
