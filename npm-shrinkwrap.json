@@ -69,18 +69,6 @@
       "from": "async@>=1.0.0 <1.1.0",
       "resolved": "https://registry.npmjs.org/async/-/async-1.0.0.tgz"
     },
-    "aws-sdk": {
-      "version": "2.10.0",
-      "from": "aws-sdk@>=2.4.7 <3.0.0",
-      "resolved": "https://registry.npmjs.org/aws-sdk/-/aws-sdk-2.10.0.tgz",
-      "dependencies": {
-        "uuid": {
-          "version": "3.0.0",
-          "from": "uuid@3.0.0",
-          "resolved": "https://registry.npmjs.org/uuid/-/uuid-3.0.0.tgz"
-        }
-      }
-    },
     "babel-runtime": {
       "version": "6.22.0",
       "from": "babel-runtime@>=6.6.1 <7.0.0",
@@ -2133,11 +2121,6 @@
       "version": "2.3.1",
       "from": "winston@>=2.3.0 <3.0.0",
       "resolved": "https://registry.npmjs.org/winston/-/winston-2.3.1.tgz"
-    },
-    "winston-aws-cloudwatch": {
-      "version": "1.4.0",
-      "from": "winston-aws-cloudwatch@>=1.4.0 <2.0.0",
-      "resolved": "https://registry.npmjs.org/winston-aws-cloudwatch/-/winston-aws-cloudwatch-1.4.0.tgz"
     },
     "wordwrap": {
       "version": "0.0.3",
