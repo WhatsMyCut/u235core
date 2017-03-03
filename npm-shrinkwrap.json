@@ -110,9 +110,9 @@
       "resolved": "https://registry.npmjs.org/bluebird/-/bluebird-3.4.7.tgz"
     },
     "bookshelf": {
-      "version": "0.9.5",
-      "from": "bookshelf@>=0.9.2 <0.10.0",
-      "resolved": "https://registry.npmjs.org/bookshelf/-/bookshelf-0.9.5.tgz",
+      "version": "0.10.0",
+      "from": "bookshelf@>=0.9.2 <0.11.0",
+      "resolved": "https://registry.npmjs.org/bookshelf/-/bookshelf-0.10.0.tgz",
       "dependencies": {
         "bluebird": {
           "version": "2.11.0",
@@ -1322,9 +1322,9 @@
       "resolved": "https://registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz"
     },
     "knex": {
-      "version": "0.10.0",
-      "from": "knex@>=0.10.0 <0.11.0",
-      "resolved": "https://registry.npmjs.org/knex/-/knex-0.10.0.tgz",
+      "version": "0.11.10",
+      "from": "knex@>=0.10.0 <0.11.10",
+      "resolved": "https://registry.npmjs.org/knex/-/knex-0.11.10.tgz",
       "dependencies": {
         "bluebird": {
           "version": "2.11.0",
@@ -1644,9 +1644,9 @@
       "resolved": "https://registry.npmjs.org/path-type/-/path-type-1.1.0.tgz"
     },
     "pg": {
-      "version": "4.5.6",
-      "from": "pg@>=4.5.1 <5.0.0",
-      "resolved": "https://registry.npmjs.org/pg/-/pg-4.5.6.tgz",
+      "version": "6.1.0",
+      "from": "pg@>=4.5.1 <7.0.0",
+      "resolved": "https://registry.npmjs.org/pg/-/pg-6.1.0.tgz",
       "dependencies": {
         "semver": {
           "version": "4.3.6",
@@ -2121,6 +2121,16 @@
       "version": "2.3.1",
       "from": "winston@>=2.3.0 <3.0.0",
       "resolved": "https://registry.npmjs.org/winston/-/winston-2.3.1.tgz"
+    },
+    "winston": {
+      "version": "2.3.1",
+      "from": "winston@>=2.3.0 <3.0.0",
+      "resolved": "https://registry.npmjs.org/winston/-/winston-2.3.1.tgz"
+    },
+    "winston-aws-cloudwatch": {
+      "version": "1.4.0",
+      "from": "winston-aws-cloudwatch@>=1.4.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/winston-aws-cloudwatch/-/winston-aws-cloudwatch-1.4.0.tgz"
     },
     "wordwrap": {
       "version": "0.0.3",

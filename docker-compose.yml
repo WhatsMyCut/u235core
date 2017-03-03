@@ -3,20 +3,22 @@ services:
   u235core:
     container_name: u235core
     build: .
-    env_file: environment.txt
+    env_file: .env.dev
     entrypoint:
       - /bin/bash
       - -c
     command:
-      - NODE_ENV=test /usr/bin/npm run db:migrate && NODE_ENV=test /usr/bin/npm run db:seed && NODE_ENV=development /usr/bin/npm start
+      - /usr/bin/npm run db:migrate && /usr/bin/npm start
     ports:
       - "8000:80"
+      - "5858:5858"
     environment:
       - SSH_AUTH_SOCK=/ssh-agent
     depends_on:
       - db
       - db_test
     volumes:
+      - ~/.aws:/root/.aws
       - $SSH_AUTH_SOCK:/ssh-agent
   db:
     image: postgres:9.5

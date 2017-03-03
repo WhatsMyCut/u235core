@@ -12,7 +12,7 @@ const {
 } = require('u235logger')
 const logger = createLogger()
 
-// setup AWS configuration 
+// setup AWS configuration
 /*
 const AWS = require('aws-sdk')
 AWS.config = Object.assign({}, AWS.config, {
