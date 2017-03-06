@@ -347,8 +347,8 @@
     },
     "u235logger": {
       "version": "0.1.1",
-      "from": "git+ssh://git@github.com/WhatsMyCut/u235logger.git#v0.1.1",
-      "resolved": "git+ssh://git@github.com/WhatsMyCut/u235logger.git#v0.1.1"
+      "from": "git+ssh://git@github.com/WhatsMyCut/u235logger.git#1.0.0",
+      "resolved": "git+ssh://git@github.com/WhatsMyCut/u235logger.git#1.0.0"
     },
     "ecdsa-sig-formatter": {
       "version": "1.0.9",
@@ -869,9 +869,9 @@
           "resolved": "https://registry.npmjs.org/joi/-/joi-6.10.1.tgz"
         },
         "knex": {
-          "version": "0.7.6",
-          "from": "knex@>=0.7.3 <0.8.0",
-          "resolved": "https://registry.npmjs.org/knex/-/knex-0.7.6.tgz"
+          "version": "^0.10.0",
+          "from": "knex@>=0.10.0 <0.11.10",
+          "resolved": "https://registry.npmjs.org/knex/-/knex-0.11.10.tgz"
         },
         "lodash": {
           "version": "2.4.2",
@@ -1322,7 +1322,7 @@
       "resolved": "https://registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz"
     },
     "knex": {
-      "version": "0.11.10",
+      "version": "0.10.0",
       "from": "knex@>=0.10.0 <0.11.10",
       "resolved": "https://registry.npmjs.org/knex/-/knex-0.11.10.tgz",
       "dependencies": {
@@ -1510,6 +1510,11 @@
       "from": "mock-knex@0.3.1",
       "resolved": "https://registry.npmjs.org/mock-knex/-/mock-knex-0.3.1.tgz",
       "dependencies": {
+        "knex": {
+          "version": "^0.10.0",
+          "from": "knex@>=0.10.0 <0.11.10",
+          "resolved": "https://registry.npmjs.org/knex/-/knex-0.11.10.tgz"
+        },
         "bluebird": {
           "version": "2.11.0",
           "from": "bluebird@>=2.9.25 <3.0.0",
