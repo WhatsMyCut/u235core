@@ -359,8 +359,8 @@
     },
     "u235logger": {
       "version": "1.0.1",
-      "from": "git+ssh://git@github.com/yaengage/u235logger.git#1.0.1",
-      "resolved": "git+ssh://git@github.com/yaengage/u235logger.git#1.0.1"
+      "from": "git+ssh://git@github.com/WhatsMyCut/u235logger.git#1.0.1",
+      "resolved": "git+ssh://git@github.com/WhatsMyCut/u235logger.git#1.0.1"
     },
     "ecdsa-sig-formatter": {
       "version": "1.0.9",
