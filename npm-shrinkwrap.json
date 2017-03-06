@@ -69,6 +69,18 @@
       "from": "async@>=1.0.0 <1.1.0",
       "resolved": "https://registry.npmjs.org/async/-/async-1.0.0.tgz"
     },
+    "aws-sdk": {
+      "version": "2.10.0",
+      "from": "aws-sdk@>=2.4.7 <3.0.0",
+      "resolved": "https://registry.npmjs.org/aws-sdk/-/aws-sdk-2.10.0.tgz",
+      "dependencies": {
+        "uuid": {
+          "version": "3.0.0",
+          "from": "uuid@3.0.0",
+          "resolved": "https://registry.npmjs.org/uuid/-/uuid-3.0.0.tgz"
+        }
+      }
+    },
     "babel-runtime": {
       "version": "6.22.0",
       "from": "babel-runtime@>=6.6.1 <7.0.0",
@@ -95,9 +107,9 @@
       "resolved": "https://registry.npmjs.org/base64url/-/base64url-2.0.0.tgz"
     },
     "bcrypt": {
-      "version": "^1.0.2",
-      "from": "bcrypt@>=1.0.0 <0.9.0",
-      "resolved": "https://registry.npmjs.org/bcrypt/-/bcrypt-1.0.2.tgz"
+      "version": "0.8.7",
+      "from": "bcrypt@>=0.8.5 <0.9.0",
+      "resolved": "https://registry.npmjs.org/bcrypt/-/bcrypt-0.8.7.tgz"
     },
     "bindings": {
       "version": "1.2.1",
@@ -110,9 +122,9 @@
       "resolved": "https://registry.npmjs.org/bluebird/-/bluebird-3.4.7.tgz"
     },
     "bookshelf": {
-      "version": "0.10.0",
-      "from": "bookshelf@>=0.9.2 <0.11.0",
-      "resolved": "https://registry.npmjs.org/bookshelf/-/bookshelf-0.10.0.tgz",
+      "version": "0.9.5",
+      "from": "bookshelf@>=0.9.2 <0.10.0",
+      "resolved": "https://registry.npmjs.org/bookshelf/-/bookshelf-0.9.5.tgz",
       "dependencies": {
         "bluebird": {
           "version": "2.11.0",
@@ -346,9 +358,9 @@
       "resolved": "https://registry.npmjs.org/duplexify/-/duplexify-3.5.0.tgz"
     },
     "u235logger": {
-      "version": "0.1.1",
-      "from": "git+ssh://git@github.com/WhatsMyCut/u235logger.git#1.0.1",
-      "resolved": "git+ssh://git@github.com/WhatsMyCut/u235logger.git#1.0.1"
+      "version": "1.0.1",
+      "from": "git+ssh://git@github.com/yaengage/u235logger.git#1.0.1",
+      "resolved": "git+ssh://git@github.com/yaengage/u235logger.git#1.0.1"
     },
     "ecdsa-sig-formatter": {
       "version": "1.0.9",
@@ -869,9 +881,9 @@
           "resolved": "https://registry.npmjs.org/joi/-/joi-6.10.1.tgz"
         },
         "knex": {
-          "version": "^0.10.0",
-          "from": "knex@>=0.10.0 <0.11.10",
-          "resolved": "https://registry.npmjs.org/knex/-/knex-0.11.10.tgz"
+          "version": "0.7.6",
+          "from": "knex@>=0.7.3 <0.8.0",
+          "resolved": "https://registry.npmjs.org/knex/-/knex-0.7.6.tgz"
         },
         "lodash": {
           "version": "2.4.2",
@@ -1323,8 +1335,8 @@
     },
     "knex": {
       "version": "0.10.0",
-      "from": "knex@>=0.10.0 <0.11.10",
-      "resolved": "https://registry.npmjs.org/knex/-/knex-0.11.10.tgz",
+      "from": "knex@>=0.10.0 <0.11.0",
+      "resolved": "https://registry.npmjs.org/knex/-/knex-0.10.0.tgz",
       "dependencies": {
         "bluebird": {
           "version": "2.11.0",
@@ -1510,11 +1522,6 @@
       "from": "mock-knex@0.3.1",
       "resolved": "https://registry.npmjs.org/mock-knex/-/mock-knex-0.3.1.tgz",
       "dependencies": {
-        "knex": {
-          "version": "^0.10.0",
-          "from": "knex@>=0.10.0 <0.11.10",
-          "resolved": "https://registry.npmjs.org/knex/-/knex-0.11.10.tgz"
-        },
         "bluebird": {
           "version": "2.11.0",
           "from": "bluebird@>=2.9.25 <3.0.0",
@@ -1649,9 +1656,9 @@
       "resolved": "https://registry.npmjs.org/path-type/-/path-type-1.1.0.tgz"
     },
     "pg": {
-      "version": "6.1.0",
-      "from": "pg@>=4.5.1 <7.0.0",
-      "resolved": "https://registry.npmjs.org/pg/-/pg-6.1.0.tgz",
+      "version": "4.5.6",
+      "from": "pg@>=4.5.1 <5.0.0",
+      "resolved": "https://registry.npmjs.org/pg/-/pg-4.5.6.tgz",
       "dependencies": {
         "semver": {
           "version": "4.3.6",
@@ -2121,11 +2128,6 @@
       "version": "0.2.0",
       "from": "window-size@>=0.2.0 <0.3.0",
       "resolved": "https://registry.npmjs.org/window-size/-/window-size-0.2.0.tgz"
-    },
-    "winston": {
-      "version": "2.3.1",
-      "from": "winston@>=2.3.0 <3.0.0",
-      "resolved": "https://registry.npmjs.org/winston/-/winston-2.3.1.tgz"
     },
     "winston": {
       "version": "2.3.1",
