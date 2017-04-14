@@ -3,16 +3,10 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 ADD . /u235core
 ARG BUILD_ENV=development
 
-RUN chmod +x /u235core/scripts/docker-entrypoint.sh
+#RUN chmod +x /u235core/scripts/docker-entrypoint.sh
 
 # install required packages
 RUN apt-get -qq -y update && apt-get -qq -y install wget ruby2.3 g++ build-essential curl python git
-
-# install unicreds
-RUN wget https://github.com/Versent/unicreds/releases/download/v1.5.0/unicreds_1.5.0_linux_x86_64.tgz
-RUN tar xzvf unicreds_1.5.0_linux_x86_64.tgz
-RUN chmod +x unicreds
-RUN mv unicreds /usr/local/bin/
 
 # install npm and node
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
