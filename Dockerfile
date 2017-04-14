@@ -32,7 +32,7 @@ RUN if [ "$BUILD_ENV" != "development" ]; then \
 
 EXPOSE 80
 
-#ENTRYPOINT ["/u235core/scripts/docker-entrypoint.sh"]
+ENTRYPOINT ["/u235core/scripts/docker-entrypoint.sh"]
 
 # run migrations and start app
-CMD ["/usr/bin/npm run db:migrate:test && /usr/bin/npm start"]
+CMD ["/usr/bin/npm run db:migrate && /usr/bin/npm start"]
