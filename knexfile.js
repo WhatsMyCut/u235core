@@ -21,7 +21,7 @@ const store = new Confidence.Store({
         test: 'u235core'
       },
       host: 'localhost',
-      port: 5433,
+      port: 5432,
       user: {
         $filter: 'env',
         $default: 'u235core',
