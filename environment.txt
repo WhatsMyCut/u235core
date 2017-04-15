@@ -4,4 +4,5 @@ LOG_STREAM_NAME=U235CoreDev
 DATABASE_URL=postgres://u235core:u235coredbpassword@db:5432/u235core
 DATABASE_URL_TEST=postgres://u235core:u235coredbpassword@db_test:5432/u235core
 PORT=80
+SERVICE_SECRET_ENCRYPTION_KEY=e9hcjcldtlrbkwii80qk
 LDAP_URL=ldap://ldap.jumpcloud.com

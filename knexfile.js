@@ -29,8 +29,8 @@ const store = new Confidence.Store({
       },
       password: {
         $filter: 'env',
-        $default: 'u235corepassword',
-        test: 'u235corepassword'
+        $default: 'u235coredbpassword',
+        test: 'u235coredbpassword'
       }
     }
   },

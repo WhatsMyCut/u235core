@@ -1,6 +1,8 @@
 {
   "name": "u235core",
   "version": "1.0.0",
+  "description": "u235core library",
+  "repository": "git+ssh://git@github.com/WhatsMyCut/u235core.git",
   "dependencies": {
     "alce": {
       "version": "1.2.0",
@@ -358,9 +360,9 @@
       "resolved": "https://registry.npmjs.org/duplexify/-/duplexify-3.5.0.tgz"
     },
     "u235logger": {
-      "version": "1.0.0",
-      "from": "git+ssh://git@github.com/WhatsMyCut/u235logger.git#v0.1.0",
-      "resolved": "git+ssh://git@github.com/WhatsMyCut/u235logger.git"
+      "version": "1.0.1",
+      "from": "git+ssh://git@github.com/WhatsMyCut/u235logger.git#1.0.1",
+      "resolved": "git+ssh://git@github.com/WhatsMyCut/u235logger.git#96480e84157d8aed7eaeb800b006fb0b8eb30f98"
     },
     "ecdsa-sig-formatter": {
       "version": "1.0.9",
