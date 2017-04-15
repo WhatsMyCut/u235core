@@ -1,6 +1,6 @@
 'use strict'
 const path = require('path')
-require('dotenv').config({ path: '.env' })
+require('dotenv').config({ path: '.env.dev' })
 const Confidence = require('confidence')
 const env = process.env.NODE_ENV
 const _ = require('lodash')

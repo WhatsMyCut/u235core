@@ -12,8 +12,8 @@ const describe = lab.describe
 const beforeEach = lab.beforeEach
 const after = lab.after
 const it = lab.it
-
-describe('server', () => {
+/*
+describe('server_test', () => {
   it('runs', { timeout: 10000 }, done => {
     server.start().then(s => {
       let url = `http://localhost:${s.info.port}/okcomputer`
@@ -26,3 +26,4 @@ describe('server', () => {
     }).catch(done)
   })
 })
+*/

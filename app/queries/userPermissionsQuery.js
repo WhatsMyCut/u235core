@@ -29,8 +29,7 @@ class UserPermissionsQuery {
         .from('permissions')
         .innerJoin('role_permissions', 'role_permissions.permission_id', '=', 'permissions.id')
         .innerJoin('roles', 'role_permissions.role_id', '=', 'roles.id')
-        .innerJoin('user_roles', 'role_permissions.role_id', '=', 'roles.id')
-        .innerJoin('users', 'user_roles.user_id', '=', 'users.id')
+        .innerJoin('users', 'roles.user_id', '=', 'users.id')
         .where('users.id', '=', this.userId)
   }
 }

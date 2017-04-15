@@ -1,30 +1,30 @@
-var Promise = require('bluebird')
-var hashPassword = require('../../app/lib/hashPassword')
-var uuid = require('node-uuid')
+let Promise = require('bluebird')
+let hashPassword = require('../../app/lib/hashPassword')
+let uuid = require('node-uuid')
 
 exports.seed = Promise.coroutine(function *(knex, Promise) {
-  var now = new Date()
+  let now = new Date()
 
   // create user credentials
-  var password = 'admin'
-  var passwordHash = yield hashPassword(password)
-  var credentialIds = yield knex('credentials').insert({
+  let password = 'admin'
+  let passwordHash = yield hashPassword(password)
+  let credentialIds = yield knex('credentials').insert({
     username: 'admin',
     password_hash: passwordHash,
     created_at: now,
     updated_at: now,
     active: true,
   }).returning('id')
-  var credentialId = credentialIds[0]
+  let credentialId = credentialIds[0]
 
   // create user
-  var userIds = yield knex('users').insert({
+  let userIds = yield knex('users').insert({
     email: 'admin',
     credential_id: credentialId,
     created_at: now,
     updated_at: now,
   }).returning('id')
-  var userId = userIds[0]
+  let userId = userIds[0]
 
   // create api key for user
   yield knex('api_keys').insert({
@@ -37,14 +37,24 @@ exports.seed = Promise.coroutine(function *(knex, Promise) {
   })
 
   // Give the user the Sysadmin role
-  var roles = yield knex('roles').where({ name: 'Sysadmin' })
-  var roleId = roles[0].id
-  yield knex('user_roles').insert({
-    user_id: userId,
-    role_id: roleId,
+  let res1 = yield knex('roles').returning('id').insert({
+    name: 'Sysadmin',
     created_at: now,
     updated_at: now,
   })
+  let roleId = res1[0]
+
+  let res2 = yield knex('api_permissions').returning('id').insert({
+    name: 'System',
+    resource: 'ALL',
+    action: '*',
+    method: '*',
+    route: '/',
+    description: 'This permission allows a user to perform any action and access any data',
+    created_at: now,
+    updated_at: now,
+  })
+  let permissionId = res2[0]
 
   return Promise.resolve(true)
-});
+})

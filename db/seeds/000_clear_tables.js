@@ -9,8 +9,7 @@ exports.seed = function(knex, Promise) {
     knex('api_permission_roles').del(),
     knex('api_permissions').del(),
     knex('ui_permission_roles').del(),
-    knex('ui_permissions').del(),
-    knex('histories').del(),
-    knex('comments').del()
+    knex('ui_permissions').del()
+    //knex('comments').del()
   )
 }

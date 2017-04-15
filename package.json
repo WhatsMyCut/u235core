@@ -6,7 +6,7 @@
     "start": "node ./main.js || true",
     "debug": "node --debug ./main.js || true",
     "watch": "nodemon -w ./ ./main.js",
-    "test:unit": "lab -v test/lib test/models test/plugins test/services test/queries -a code -t 100 -I __core-js_shared__ -c --coverage-exclude app/services",
+    "test:unit": "lab -v test/lib test/models test/plugins -a code -t 100 -I __core-js_shared__ -c --coverage-exclude app/services",
     "test:integration": "lab -v -a code -I __core-js_shared__ test/integrations",
     "test:integrationInspect": "lab -v --inspect=5858 -a code -I __core-js_shared__ test/integrations",
     "test": "npm run test:integration && npm run test:unit",
