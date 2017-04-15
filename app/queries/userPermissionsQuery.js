@@ -1,3 +1,5 @@
+'use strict'
+
 const camelCaseKeys = require('../lib/camelCaseKeys')
 
 // $lab:coverage:off$
