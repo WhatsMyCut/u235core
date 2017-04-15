@@ -1,5 +1,5 @@
 module.exports = function(base) {
   return base.extend({
-    tableName: 'permissions'
+    tableName: 'api_permissions'
   })
 }
