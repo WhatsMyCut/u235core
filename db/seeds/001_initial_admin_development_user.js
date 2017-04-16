@@ -56,13 +56,5 @@ exports.seed = Promise.coroutine(function *(knex, Promise) {
   })
   let permissionId = res2[0]
 
-  // role relationship the Sysadmin role
-  yield knex('role_permissions').insert({
-    role_id: roleId,
-    permission_id: permissionId,
-    created_at: now,
-    updated_at: now,
-  })
-
   return Promise.resolve(true)
 })
